@@ -1,5 +1,5 @@
 -- CARGA DE LIBRERÍA
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/SadOz8/Library/refs/heads/main/Library.txt"))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bestwars17/Libary/refs/heads/main/Library%20(1).txt"))()
 
 -- OBTENER NOMBRE DEL JUGADOR
 local player = game.Players.LocalPlayer
