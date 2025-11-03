@@ -6,7 +6,7 @@ local player = game.Players.LocalPlayer
 local displayName = player.DisplayName or player.Name
 
 -- VENTANA PRINCIPAL
-local window = library:AddWindow("Toxic Free Version Cracked By ZTX| Bienvenido " .. displayName, {
+local window = library:AddWindow("سكربت كلان ديقل| منور " .. displayName, {
     main_color = Color3.fromRGB(34, 56, 34),
     min_size = Vector2.new(550, 820),
     can_resize = false,
@@ -4503,7 +4503,6 @@ Gift:AddButton(
 
 local Credits = window:AddTab("Credits")
 
-Credits:AddLabel("Toxic Free Version Cracked By ZTX")
-Credits:AddLabel("Script Hecho por: Rafael")
-Credits:AddLabel("Tiktok:Muscle Legends Free Cracked Scripts")
-Credits:AddLabel("ZTX ON TOP 🔥")
+Credits:AddLabel("🔥سكربت كلان ديقل")
+Credits:AddLabel(" تم التعاون يوسف و فهد💪")
+
