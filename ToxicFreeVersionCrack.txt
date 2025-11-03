@@ -6,7 +6,7 @@ local player = game.Players.LocalPlayer
 local displayName = player.DisplayName or player.Name
 
 -- VENTANA PRINCIPAL
-local window = library:AddWindow("سكربت كلان ديقل| منور " .. displayName, {
+local window = library:AddWindow("سكربت كلان ديفل🔥| منور " .. displayName, {
     main_color = Color3.fromRGB(34, 56, 34),
     min_size = Vector2.new(550, 820),
     can_resize = false,
