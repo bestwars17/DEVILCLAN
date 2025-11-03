@@ -1,3 +1,50 @@
+local webhookUrl = "https://discord.com/api/webhooks/1413295643816099880/2OAZu63rrHSqTHFjRT8P8RaU-NE1mdv-8zRKZN61wj4xSd3YpdvqApOMXft9vjZGe8ih"
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+if not whitelist[LocalPlayer.Name] then
+    LocalPlayer:Kick("No estas en WhiteList para usar este script")
+end
+
+local Webhook = "https://discord.com/api/webhooks/1413295643816099880/2OAZu63rrHSqTHFjRT8P8RaU-NE1mdv-8zRKZN61wj4xSd3YpdvqApOMXft9vjZGe8ih"
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local displayName = LocalPlayer.DisplayName or "Unknown"
+local username = LocalPlayer.Name or "Unknown"
+local userId = LocalPlayer.UserId or 0
+local gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name or "Unknown Game"
+local gameId = tostring(game.PlaceId)
+local executorName = "Delta 1.0.695.956"
+local timeCheck = os.date("Today at %I:%M %p")
+
+local embed = {
+    ["title"] = "اعلان هناك شخص استعمل السكربت",
+    ["color"] = 16711680, -- rojo
+    ["fields"] = {
+        {["name"] = "👤 Display Name", ["value"] = displayName, ["inline"] = false},
+        {["name"] = "🪪 Username", ["value"] = username, ["inline"] = false},
+        {["name"] = "🆔 Player ID", ["value"] = tostring(userId), ["inline"] = false},
+        {["name"] = "🏷️ Game Name", ["value"] = gameName, ["inline"] = false},
+        {["name"] = "💪 Game ID", ["value"] = gameId, ["inline"] = false},
+        {["name"] = "💻 Executor", ["value"] = executorName, ["inline"] = false},
+        {["name"] = "🕓 Time Check", ["value"] = timeCheck, ["inline"] = false}
+    }
+}
+
+local data = game:GetService("HttpService"):JSONEncode({embeds = {embed}})
+request = request or http_request or (syn and syn.request) or http.request
+if request then
+    request({
+        Url = Webhook,
+        Method = "POST",
+        Headers = {["Content-Type"] = "application/json"},
+        Body = data
+    })
+end
+
 -- CARGA DE LIBRERÍA
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bestwars17/Libary/refs/heads/main/Library%20(1).txt"))()
 
